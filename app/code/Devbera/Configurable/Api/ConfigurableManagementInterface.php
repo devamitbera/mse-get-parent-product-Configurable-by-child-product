@@ -11,13 +11,24 @@
 
 namespace Devbera\Configurable\Api;
 
+
 interface ConfigurableManagementInterface
 {
 
     /**
-     * GET for getParentIdsByChild api
+     *  GET for parent Product by Child id api
      * @param int $childId
+     * @throws \Magento\Framework\Exception\LocalizedException
      * @return \Magento\Catalog\Api\Data\ProductInterface[]
      */
     public function getParentIdsByChild($childId);
+
+    /**
+     * GET for parent Product by Child Sku
+     * @param string childSku
+     * @throws \Magento\Framework\Exception\NoSuchEntityException
+     * @throws \Magento\Framework\Exception\LocalizedException
+     * @return \Magento\Catalog\Api\Data\ProductInterface[]
+     */
+    public function getParentIdsByChildSku($childSku);
 }

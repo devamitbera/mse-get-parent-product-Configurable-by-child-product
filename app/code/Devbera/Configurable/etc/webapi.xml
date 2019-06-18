@@ -4,6 +4,21 @@
 		<service class="Devbera\Configurable\Api\ConfigurableManagementInterface"
 				 method="getParentIdsByChild"/>
 		<resources>
+			<!--- remove anonymous at production and use Magento_Catalog::products  -->
+			<!--
+			<resource ref="Magento_Catalog::products"/>
+			-->
+			<resource ref="anonymous"/>
+		</resources>
+	</route>
+	<route method="GET" url="/V1/devbera-configurable/child-sku/:childSku">
+		<service class="Devbera\Configurable\Api\ConfigurableManagementInterface"
+				 method="getParentIdsByChildSku"/>
+		<resources>
+			<!--- remove anonymous at production and use Magento_Catalog::products  -->
+			<!--
+			<resource ref="Magento_Catalog::products"/>
+			-->
 			<resource ref="anonymous"/>
 		</resources>
 	</route>

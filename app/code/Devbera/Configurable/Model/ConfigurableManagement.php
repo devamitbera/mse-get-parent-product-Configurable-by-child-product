@@ -57,4 +57,17 @@ class ConfigurableManagement implements \Devbera\Configurable\Api\ConfigurableMa
 
         return $parentList;
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getParentIdsByChildSku($childSku)
+    {
+        $child = $this->productRepository->get($childSku);
+
+        if ($child->getTypeId() != \Magento\ConfigurableProduct\Model\Product\Type\Configurable::TYPE_CODE) {
+            return [];
+        }
+        return $this->getParentIdsByChild($child->getId());
+    }
 }
