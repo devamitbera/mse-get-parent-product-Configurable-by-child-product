@@ -1,0 +1,22 @@
+{
+    "name": "devbera/module-configurable",
+    "description": "",
+    "type": "magento2-module",
+    "license": "OSL-3.0",
+    "authors": [
+        {
+            "name": "Amit Bera",
+            "email": "dev.amitbera@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Devbera\\Configurable\\": ""
+        },
+        "files": [
+            "registration.php"
+        ]
+    }
+}
