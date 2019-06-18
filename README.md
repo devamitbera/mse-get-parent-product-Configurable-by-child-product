@@ -28,7 +28,7 @@ Replace `:childSku` by your child Product Sku.
 
 4. app/code/Devbera/Configurable/Api/ConfigurableManagementInterface.php
 
-** EXAMPLE***
+***EXAMPLE***
 
 ```
 <?php
