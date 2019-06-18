@@ -30,12 +30,13 @@ Replace `:childSku` by your child Product Sku.
 
 ** EXAMPLE***
 
-`<?php
+```
+<?php
 
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "http://127.0.0.1/magento23dev/index.php/rest/V1/devbera-configurable/53",
+  CURLOPT_URL => "http://www.example.com/rest/V1/devbera-configurable/53",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -60,4 +61,5 @@ if ($err) {
   echo "cURL Error #:" . $err;
 } else {
   echo $response;
-}`
+}
+```
